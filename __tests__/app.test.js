@@ -17,7 +17,7 @@ describe('Gitty routes', () => {
     );
   });
 
-  it('should login and redirect users to /api/v1/posts', async () => {
+  it('should login and redirect users to /api/v1/github/user which displays the logged in user info', async () => {
     const res = await request
       .agent(app)
       .get('/api/v1/github/callback?code=42')
