@@ -32,6 +32,12 @@ describe('Gitty routes', () => {
     });
   });
 
+  it('GET /posts should return 401 if not logged in', async () => {
+    const agent = request.agent(app);
+    const res = await agent.get('/api/v1/posts');
+    expect(res.status).toBe(401);
+  });
+
   afterAll(() => {
     pool.end();
   });
