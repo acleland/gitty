@@ -18,3 +18,9 @@ jobs:
         env:
           CI: true
           DATABASE_URL: postgres://alchemy:alchemy@postgres:5432/alchemy
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          SALT_ROUNDS: ${{ secrets.SALT_ROUNDS }}
+          COOKIE_NAME: ${{ secrets.COOKIE_NAME }}
+          GITHUB_CLIENT_ID: ${{ secrets.GH_CLIENT_ID }}
+          GITHUB_CLIENT_SECRET: ${{ secrets.GH_CLIENT_SECRET }}
+          GITHUB_REDIRECT_URI: ${{ GITHUB_REDIRECT_URI }}
