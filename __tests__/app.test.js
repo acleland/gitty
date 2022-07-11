@@ -38,6 +38,24 @@ describe('Gitty routes', () => {
     expect(res.status).toBe(401);
   });
 
+  // it('GET /posts should return 200 if logged in', async () => {
+  //   const agent = request.agent(app);
+  //   const login_res = await agent
+  //     .get('/api/v1/github/callback?code=42')
+  //     .redirects(1);
+  //   const user = login_res.body;
+  //   console.log(user);
+  //   expect(user).toEqual({
+  //     id: expect.any(String),
+  //     username: 'fake_github_user',
+  //     email: 'not-real@example.com',
+  //     iat: expect.any(Number),
+  //     exp: expect.any(Number),
+  //   });
+  //   const res = await agent.get('api/v1/posts');
+  //   expect(res.status).toBe(200);
+  // });
+
   afterAll(() => {
     pool.end();
   });
